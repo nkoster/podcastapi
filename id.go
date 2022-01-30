@@ -14,9 +14,10 @@ func id(c *fiber.Ctx) error {
 
 	id := c.Params("id")
 
-	data, err := os.ReadFile(useDir + id + ".xml")
+	data, err := os.ReadFile(useDir + "/" + id + ".xml")
 
 	if err != nil {
+		fmt.Println(err)
 		return c.SendString("{}")
 	}
 
