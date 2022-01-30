@@ -10,12 +10,14 @@ import (
 
 func id(c *fiber.Ctx) error {
 
+	c.Set("Content-type", "application/json; charset=utf-8")
+
 	id := c.Params("id")
 
 	data, err := os.ReadFile(useDir + id + ".xml")
 
 	if err != nil {
-		return c.SendString("not found")
+		return c.SendString("{}")
 	}
 
 	var item Item
@@ -28,8 +30,6 @@ func id(c *fiber.Ctx) error {
 	jsonString += "\"link\":\"" + item.Mp3 + "\","
 	jsonString += "\"description\":\"" + item.Description + "\""
 	jsonString += "}}"
-
-	c.Set("Content-type", "application/json; charset=utf-8")
 
 	return c.SendString(jsonString)
 
