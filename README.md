@@ -1,6 +1,8 @@
-#### Usage
+#### Usage with local systemd
 
 Clone repo and `cd` into `podcastapi`
+
+Have a look at `builder`:
 
 ```
 cat builder
@@ -12,10 +14,14 @@ ssh master systemctl --user start podcastapi
 ```
 "master" is the destination host where the binary will run.
 
-Tp prepare the master, the first time you have to:
+Adjust "master" to your needs.
+
+Tp prepare "master", the first time you have to:
 
 ```
 ssh master mkdir -p .config/systemd/user
 scp systemd/user/podcastapi.service master:.config/systemd/user/
 ssh master systemctl --user daemon-relaod
 ```
+
+Run `builder` to build and deploy to "master".
