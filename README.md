@@ -1,5 +1,7 @@
 #### Usage
 
+Clone repo and `cd` into `podcastapi`
+
 ```
 cat builder
 CGO_ENABLED=0 go build -ldflags="-extldflags=-static"
