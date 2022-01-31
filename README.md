@@ -1,4 +1,4 @@
-This thing converts [our](https://drone-existence.com) old xml files to a JSON API.
+This go program converts [our](https://drone-existence.com) old xml file directory into a JSON API.
 
 #### Usage with local systemd
 
