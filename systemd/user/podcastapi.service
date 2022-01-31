@@ -1,0 +1,12 @@
+[Unit]
+Description=Podcast API Server
+Documentation=https://github.com/nkoster/podcastapi
+
+[Service]
+Type=simple
+RemainAfterExit=no
+WorkingDirectory=/home/pot
+ExecStart=sh -c "/home/pot/podcastapi /home/pot/html/podcast/media"
+
+[Install]
+WantedBy=default.target
