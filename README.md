@@ -1,3 +1,5 @@
+This thing converts [our](https://drone-existence.com) old xml files to a JSON API.
+
 #### Usage with local systemd
 
 Clone repo and `cd` into `podcastapi`
