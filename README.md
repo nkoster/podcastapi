@@ -24,4 +24,8 @@ scp systemd/user/podcastapi.service master:.config/systemd/user/
 ssh master systemctl --user daemon-relaod
 ```
 
-Run `builder` to build and deploy to "master".
+Run `builder` to build and deploy to "master":
+
+```
+sh builder
+```
