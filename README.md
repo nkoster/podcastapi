@@ -16,7 +16,7 @@ ssh master systemctl --user start podcastapi
 
 Adjust "master" to your needs.
 
-Tp prepare "master", the first time you have to:
+To prepare "master", the first time you have to:
 
 ```
 ssh master mkdir -p .config/systemd/user
